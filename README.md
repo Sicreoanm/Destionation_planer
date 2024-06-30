@@ -56,13 +56,13 @@ Za izgradnju i pokretanje aplikacije koristeći Docker:
 1. Izgradite Docker sliku:
 
     ```sh
-    docker build -t destination-planner .
+    docker build -t my-flask-app .
     ```
 
 2. Pokrenite Docker kontejner:
 
     ```sh
-    docker run -p 5000:5000 destination-planner
+    docker run -d -p 8000:8000 --name flask-app-container -v --put do file-- :/app/instance my-flask-app
     ```
 
 Aplikacija će biti dostupna na `http://localhost:5000`.
