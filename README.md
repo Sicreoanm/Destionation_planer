@@ -1,8 +1,6 @@
-# Plan destinacija
+# Planer Destinacija
 
 Ovaj projekt je jednostavna Flask aplikacija za upravljanje destinacijama. Omogućuje korisnicima dodavanje, pregledavanje, ažuriranje i brisanje destinacija. Aplikacija je kontejnerizirana pomoću Dockera, što olakšava njezino postavljanje i pokretanje.
-
-
 
 ## Preduvjeti
 
@@ -17,8 +15,8 @@ Ovaj projekt je jednostavna Flask aplikacija za upravljanje destinacijama. Omogu
 1. Klonirajte repozitorij:
 
     ```sh
-    git clone https://github.com/Sicreoanm/Destination-planner.git
-    cd flask_app
+    git clone https://github.com/YOUR_USERNAME/Destination-Planner.git
+    cd Destination-Planner
     ```
 
 ### Postavljanje Virtualnog Okruženja
@@ -27,7 +25,8 @@ Ovaj projekt je jednostavna Flask aplikacija za upravljanje destinacijama. Omogu
 
     ```sh
     python -m venv venv
-    .\venv\Scripts\activate
+    .\venv\Scripts\activate   # Na Windowsu
+    source venv/bin/activate  # Na macOS/Linuxu
     ```
 
 3. Instalirajte ovisnosti:
@@ -57,13 +56,13 @@ Za izgradnju i pokretanje aplikacije koristeći Docker:
 1. Izgradite Docker sliku:
 
     ```sh
-    docker build -t Destination-planner .
+    docker build -t destination-planner .
     ```
 
 2. Pokrenite Docker kontejner:
 
     ```sh
-    docker run -p 5000:5000 Destination-planner
+    docker run -p 5000:5000 destination-planner
     ```
 
 Aplikacija će biti dostupna na `http://localhost:5000`.
@@ -88,3 +87,5 @@ Aplikacija pruža web sučelje za upravljanje destinacijama. Možete dodavati, u
 
 1. Kliknite na gumb "Izbriši" pored destinacije koju želite izbrisati.
 2. Potvrdite brisanje.
+
+## Struktura Projekta
