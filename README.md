@@ -65,7 +65,7 @@ Za izgradnju i pokretanje aplikacije koristeći Docker:
     docker run -d -p 8000:8000 --name flask-app-container -v --put do file-- :/app/instance my-flask-app
     ```
 
-Aplikacija će biti dostupna na `http://localhost:5000`.
+Aplikacija će biti dostupna na `http://localhost:8000`.
 
 ## Korištenje Aplikacije
 
