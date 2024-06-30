@@ -47,7 +47,7 @@ Za pokretanje aplikacije lokalno bez Dockera:
     python run.py
     ```
 
-Aplikacija će biti dostupna na `http://localhost:5000`.
+Aplikacija će biti dostupna na `http://localhost:8000`.
 
 ## Pokretanje Aplikacije s Dockerom
 
