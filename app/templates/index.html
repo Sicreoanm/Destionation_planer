@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Destination Planner</h1>
+    <form id="addDestinationForm">
+        <input type="text" name="name" placeholder="Destination Name" required>
+        <input type="text" name="description" placeholder="Description" required>
+        <button type="submit">Add Destination</button>
+    </form>
+    <ul id="destinationList">
+        {% for destination in destinations %}
+        <li>
+            <h2>{{ destination.name }}</h2>
+            <p>{{ destination.description }}</p>
+            <button onclick="editDestination({{ destination.id }})">Edit</button>
+            <button onclick="deleteDestination({{ destination.id }})">Delete</button>
+        </li>
+        {% endfor %}
+    </ul>
+    <script>
+        document.getElementById('addDestinationForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            fetch('/destination', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.json())
+                .then(data => location.reload());
+        });
+
+        function editDestination(id) {
+            const name = prompt('Enter new name:');
+            const description = prompt('Enter new description:');
+            if (name && description) {
+                const formData = new FormData();
+                formData.append('name', name);
+                formData.append('description', description);
+                fetch(`/destination/${id}`, {
+                    method: 'PUT',
+                    body: formData
+                }).then(response => response.json())
+                    .then(data => location.reload());
+            }
+        }
+
+        function deleteDestination(id) {
+            fetch(`/destination/${id}`, {
+                method: 'DELETE'
+            }).then(response => response.json())
+                .then(data => location.reload());
+        }
+    </script>
+</body>
+
+</html>
