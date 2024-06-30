@@ -87,21 +87,3 @@ Aplikacija pruža web sučelje za upravljanje destinacijama. Možete dodavati, u
 
 1. Kliknite na gumb "Izbriši" pored destinacije koju želite izbrisati.
 2. Potvrdite brisanje.
-
-## Struktura Projekta
-
-Destination-Planner/
-├── app/
-│ ├── init.py
-│ ├── models.py
-│ ├── routes.py
-├── templates/
-│ ├── index.html
-├── static/
-│ ├── style.css
-├── run.py
-├── requirements.txt
-├── Dockerfile
-├── LICENSE
-├── README.md
-└── destinations.db
