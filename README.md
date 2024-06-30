@@ -47,7 +47,7 @@ Za pokretanje aplikacije lokalno bez Dockera:
     python run.py
     ```
 
-Aplikacija će biti dostupna na `http://localhost:8000`.
+Aplikacija će biti dostupna na `http://localhost:5000`.
 
 ## Pokretanje Aplikacije s Dockerom
 
@@ -62,10 +62,10 @@ Za izgradnju i pokretanje aplikacije koristeći Docker:
 2. Pokrenite Docker kontejner:
 
     ```sh
-    docker run -d -p 8000:8000 --name flask-app-container -v --put do file-- :/app/instance my-flask-app
+    docker run -d -p 5000:5000 --name flask-app-container -v --put do file-- :/app/instance my-flask-app
     ```
 
-Aplikacija će biti dostupna na `http://localhost:8000`.
+Aplikacija će biti dostupna na `http://localhost:5000`.
 
 ## Korištenje Aplikacije
 
